@@ -22,7 +22,7 @@ const signup = (req, res, next) => {
                         firstName: req.body.firstName,
                         lastName: req.body.lastName,
                         password: passwordHash,
-                        AccountInit: 1,
+                        AccountInit: 0,
                     }))
                     .then(() => {
                         res.status(200).json({message: "user created"});

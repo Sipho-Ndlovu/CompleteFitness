@@ -4,7 +4,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons.js';
 import { Formik, useFormik } from 'formik';
 import * as Yup from 'yup';
 
-const API_URL = 'http://d3ee-82-44-28-144.ngrok.io';
+const API_URL = Platform.OS === 'ios' ? 'http://localhost:5000' : 'http://10.0.2.2:5000';
 
 // define validation schema using Yup
 const validationSchema = Yup.object().shape({
